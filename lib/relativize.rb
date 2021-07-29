@@ -76,7 +76,7 @@ module Relativize
       @name = options[:name]
       @exclude = options[:exclude]
 
-      libdir = File.join(options[:path], 'lib')
+      libdir = options[:path]
       raise ArgumentError, "Path '#{libdir}' does not exist" unless File.exist?(libdir)
 
       @base = libdir
